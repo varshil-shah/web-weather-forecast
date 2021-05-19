@@ -8,7 +8,8 @@
 }
 
 body {
-  background-color: rgb(165, 163, 163);
+  background-color: rgb(163, 165, 163);
+  margin: auto 0px;
 }
 
 .container-fluid {
@@ -52,7 +53,7 @@ body {
 .backGround {
   background-color: fff;
   border-radius: 5px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   cursor: pointer;
 }
 
@@ -62,8 +63,8 @@ body {
 }
 
 .icons-0 {
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
 }
 
 .icons,
@@ -127,25 +128,6 @@ body {
   color: #fff;
   background-color: crimson;
   border-radius: 5px;
-}
-
-.icons,
-.icons-0,
-.icons-00,
-.icons-01,
-.icons-2,
-.icons-3 {
-  animation: animate 3s linear infinite;
-}
-
-@keyframes animate {
-  0%,
-  100% {
-    transform: translateY(3px);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
 }
 
 @media (max-width: 400px) {
