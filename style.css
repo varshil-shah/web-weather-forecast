@@ -19,6 +19,10 @@ body {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+.banner-heading {
+  font-size: 32px;
+}
+
 .card {
   border: none;
   outline: none;
@@ -125,6 +129,25 @@ body {
   border-radius: 5px;
 }
 
+.icons,
+.icons-0,
+.icons-00,
+.icons-01,
+.icons-2,
+.icons-3 {
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
 @media (max-width: 400px) {
   .btn {
     width: 35%;
@@ -146,7 +169,7 @@ body {
   }
 
   .inner-data {
-    font-size: 15px;
+    font-size: 14.5px;
   }
 
   .card-title {
@@ -169,5 +192,9 @@ body {
   .icons-01 {
     height: 30px;
     width: 30px;
+  }
+
+  .banner-heading {
+    font-size: 22px;
   }
 }
