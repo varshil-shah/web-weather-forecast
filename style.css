@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
+}
+
+body {
+  background-color: rgb(165, 163, 163);
+}
+
+.container-fluid {
+  margin: 24px 0;
+}
+
+.myshadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 25%;
+  margin: 7px 0;
+}
+
+.input {
+  padding: 10px 10px;
+  margin: 13px 4px;
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-radius: 2px;
+}
+
+.left-side-box-text {
+  font-weight: bold;
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+.backGround {
+  background-color: fff;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+}
+
+.icons-00 {
+  height: 30px;
+  width: 30px;
+}
+
+.icons-0 {
+  height: 40px;
+  width: 40px;
+}
+
+.icons,
+.icons-01 {
+  height: 45px;
+  width: 45px;
+}
+
+.icons-2 {
+  height: 70px;
+  width: 70px;
+}
+
+.icons-3 {
+  height: 100px;
+  width: 100px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-title-0 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.card-title-2 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 0px;
+}
+
+.inner-data {
+  font-size: 22px;
+  color: crimson;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.inner-data-1 {
+  font-size: 25px;
+  color: crimson;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.inner-data-01 {
+  color: crimson;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.message {
+  text-align: center;
+  padding: 7px 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: crimson;
+  border-radius: 5px;
+}
+
+@media (max-width: 400px) {
+  .btn {
+    width: 35%;
+  }
+
+  .icons {
+    height: 40px;
+    width: 40px;
+  }
+
+  .left-side-box-text {
+    font-size: 16px;
+  }
+
+  .icons-0 {
+    margin-top: 7px;
+    height: 25px;
+    width: 25px;
+  }
+
+  .inner-data {
+    font-size: 15px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-title-0 {
+    font-size: 14px;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+
+  .inner-data-01 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .icons-01 {
+    height: 30px;
+    width: 30px;
+  }
+}

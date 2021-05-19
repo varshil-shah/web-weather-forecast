@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Forecast</title>
+</head>
+
+<body class="bg-light">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto">
+                <div class="row gx-3">
+                    <!-- left side div -->
+                    <div class="col-lg-4 col-md-11 col-11 mx-auto mb-lg-0 mb-5">
+                        <div class="card p-2 myshadow pb-4">
+                            <div class="row">
+                                <div class="col-lg-3 col-5">
+                                    <img src="icons/weather.svg" height="80px" width="80px" alt="">
+                                </div>
+                                <div class="col-lg-9 col-7">
+                                    <h3 class="font-weight-bold d-flex justify-content-center align-items-center mt-4">
+                                        Weather Forecast</h3>
+                                </div>
+                            </div>
+                            <hr>
+                            <input type="text" placeholder="Enter city name..." id="input" class="input">
+                            <button class="btn btn-primary ml-1" id="search">Search</button>
+
+                            <h3 class=" ml-3 text-danger font-weight-bold mt-3" style="font-size: 22px;">Current data:
+                            </h3>
+                            <div class="row mx-1">
+                                <div class="col-lg-6 col-6 mx-auto">
+                                    <div class="card p-1 backGround py-3 my-2" data-toggle="tooltip"
+                                        data-placement="top" title="Temperature">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-lg-4 col-4">
+                                                <img src="icons/temperature.png" class="icons-01" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-7 mx-auto">
+                                                <h4 class="left-side-box-text"><span id="currentTemp">-</span>&deg;C
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-6 mx-auto">
+                                    <div class="card p-1 backGround py-3 my-2">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-lg-4 col-4">
+                                                <img src="icons/location.png" class="icons-01" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-7 mx-auto">
+                                                <h4 class="left-side-box-text" id="currentCountry">-</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-6 mx-auto">
+                                    <div class="card p-1 backGround py-3 my-2">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-lg-4 col-4">
+                                                <img src="icons/humidity.svg" class="icons-01" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-7 mx-auto">
+                                                <h4 class="left-side-box-text" id="currentHumidity">-</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-6 mx-auto">
+                                    <div class="card p-1 backGround py-3 my-2">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-lg-4 col-4">
+                                                <img src="icons/pressure.svg" class="icons-01" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-7 mx-auto">
+                                                <h4 class="left-side-box-text" id="currentPressure">-</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-6 mx-auto">
+                                    <div class="card p-1 backGround py-3 my-2">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-lg-4 col-4">
+                                                <img src="icons/latitude.png" class="icons-01" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-7 mx-auto">
+                                                <h4 class="left-side-box-text" id="currentLat">-</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-6 mx-auto">
+                                    <div class="card p-1 backGround py-3 my-2">
+                                        <div class="row d-flex justify-content-between">
+                                            <div class="col-lg-4 col-4">
+                                                <img src="icons/longitude.png" class="icons-01" alt="">
+                                            </div>
+                                            <div class="col-lg-7 col-7 mx-auto">
+                                                <h4 class="left-side-box-text" id="currentLon">-</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- right side div -->
+                    <div class="col-lg-8 col-md-11 col-11 mx-auto mt-lg-0 mt-0">
+                        <div class="card p-2 myshadow">
+                            <h5 class="font-weight-bold p-2">Today's highlight</h5>
+                            <div class="row">
+                                <div class="col-lg-4 col-11 mx-auto">
+
+                                    <div class="col-lg-11 col-11 mx-auto">
+                                        <div class="card p-1 backGround py-3 my-2 p-3">
+                                            <div class="card-title-2">Sunrise</div>
+                                            <div class="row d-flex justify-content-between">
+                                                <div class="col-lg-4 col-4">
+                                                    <img src="icons/sunrise.png" class="icons" alt="">
+                                                </div>
+                                                <div class="col-lg-8 col-7 mx-auto">
+                                                    <h4 class="inner-data-01" id="sunrise">-</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-11 col-11 mx-auto">
+                                        <div class="card p-1 backGround py-3 my-2 p-3">
+                                            <div class="card-title-2">Sunset</div>
+                                            <div class="row d-flex justify-content-between">
+                                                <div class="col-lg-4 col-4">
+                                                    <img src="icons/sunset.png" class="icons" alt="">
+                                                </div>
+                                                <div class="col-lg-8 col-7 mx-auto">
+                                                    <h4 class="inner-data-01" id="sunset">-</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-4 col-11 mx-auto">
+
+                                    <div class="col-lg-11 col-11 mx-auto">
+                                        <div class="card p-1 backGround py-3 my-2 p-3">
+                                            <div class="card-title-2">Cloud</div>
+                                            <div class="row d-flex justify-content-between">
+                                                <div class="col-lg-4 col-4">
+                                                    <img src="icons/cloud.png" class="icons" alt="">
+                                                </div>
+                                                <div class="col-lg-8 col-7 mx-auto">
+                                                    <h4 class="inner-data-1" id="cloud">-</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-11 col-11 mx-auto">
+                                        <div class="card p-1 backGround py-3 my-2 p-3">
+                                            <div class="card-title-2">UV-Index</div>
+                                            <div class="row d-flex justify-content-between">
+                                                <div class="col-lg-4 col-4">
+                                                    <img src="icons/uv-index.png" class="icons" alt="">
+                                                </div>
+                                                <div class="col-lg-8 col-7 mx-auto">
+                                                    <h4 class="inner-data-1" id="uv">-</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-lg-4 col-11 mx-auto">
+
+                                    <div class="col-lg-11 col-11 mx-auto">
+                                        <div class="card p-1 backGround py-3 my-2 p-3">
+                                            <div class="card-title-2">Wind Speed (khm)</div>
+                                            <div class="row d-flex justify-content-between">
+                                                <div class="col-lg-4 col-4">
+                                                    <img src="icons/anemometer.svg" class="icons" alt="">
+                                                </div>
+                                                <div class="col-lg-8 col-7 mx-auto">
+                                                    <h4 class="inner-data-1" id="windSpeed">-</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-11 col-11 mx-auto">
+                                        <div class="card p-1 backGround py-3 my-2 p-3">
+                                            <div class="card-title-2">Wind Direction</div>
+                                            <div class="row d-flex justify-content-between">
+                                                <div class="col-lg-4 col-4">
+                                                    <img src="icons/wind-direction.png" class="icons" alt="">
+                                                </div>
+                                                <div class="col-lg-8 col-7 mx-auto">
+                                                    <h4 class="inner-data-1 ml-auto" id="windDirection">-</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <!-- bottom side - 2 cards -->
+                            <div class="row">
+                                <!-- First card -->
+                                <div class="col-lg-6 col-11 mx-auto">
+                                    <h3 class="card-title">After 2 hours:</h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-6 mx-auto">
+                                            <div class="card p-2 backGround py-1 my-2">
+                                                <h4 class="card-title-0">Humidity</h4>
+                                                <div class="row d-flex justify-content-between">
+                                                    <div class="col-lg-4 col-4">
+                                                        <img src="icons/humidity.svg" class="icons-0" alt="">
+                                                    </div>
+                                                    <div class="col-lg-7 col-7 mx-auto">
+                                                        <h4 class="inner-data" id="humidity_two">-</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-6 mx-auto">
+                                            <div class="card p-2 backGround py-1 my-2">
+                                                <h4 class="card-title-0">Dew point</h4>
+                                                <div class="row d-flex justify-content-between">
+                                                    <div class="col-lg-4 col-4">
+                                                        <img src="icons/dew-point.png" class="icons-0" alt="">
+                                                    </div>
+                                                    <div class="col-lg-7 col-7 mx-auto">
+                                                        <h4 class="inner-data" id="dew_point_two">-</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-6 mx-auto">
+                                            <div class="card p-2 backGround py-1 my-2">
+                                                <h4 class="card-title-0">Temperature</h4>
+                                                <div class="row d-flex justify-content-between">
+                                                    <div class="col-lg-4 col-4">
+                                                        <img src="icons/pressure.svg" class="icons-0" alt="">
+                                                    </div>
+                                                    <div class="col-lg-7 col-7 mx-auto">
+                                                        <h4 class="inner-data"><span
+                                                                id="temp_two">-</span>&deg;<sup>C</sup>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-6 mx-auto">
+                                            <div class="card p-2 backGround py-1 my-2">
+                                                <h4 class="card-title-0">Pressure</h4>
+                                                <div class="row d-flex justify-content-between">
+                                                    <div class="col-lg-4 col-4">
+                                                        <img src="icons/pressure.svg" class="icons-0" alt="">
+                                                    </div>
+                                                    <div class="col-lg-7 col-7 mx-auto">
+                                                        <h4 class="inner-data" id="pressure_two">-</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p class="message mt-2" id="message_one">-</p>
+                                </div>
+
+                                <!-- Second card -->
+
+                                <div class="col-lg-6 col-11 mx-auto mt-lg-0 mt-3">
+                                    <h3 class="card-title">After 4 hours:</h3>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-6 mx-auto">
+                                            <div class="card p-2 backGround py-1 my-2">
+                                                <h4 class="card-title-0">Humidity</h4>
+                                                <div class="row d-flex justify-content-between">
+                                                    <div class="col-lg-4 col-4">
+                                                        <img src="icons/humidity.svg" class="icons-0" alt="">
+                                                    </div>
+                                                    <div class="col-lg-7 col-7 mx-auto">
+                                                        <h4 class="inner-data" id="humidity_four">-</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-6 mx-auto">
+                                            <div class="card p-2 backGround py-1 my-2">
+                                                <h4 class="card-title-0">Dew point</h4>
+                                                <div class="row d-flex justify-content-between">
+                                                    <div class="col-lg-4 col-4">
+                                                        <img src="icons/dew-point.png" class="icons-0" alt="">
+                                                    </div>
+                                                    <div class="col-lg-7 col-7 mx-auto">
+                                                        <h4 class="inner-data" id="dew_point_four">-</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-6 mx-auto">
+                                            <div class="card p-2 backGround py-1 my-2">
+                                                <h4 class="card-title-0">Temperature</h4>
+                                                <div class="row d-flex justify-content-between">
+                                                    <div class="col-lg-4 col-4">
+                                                        <img src="icons/pressure.svg" class="icons-0" alt="">
+                                                    </div>
+                                                    <div class="col-lg-7 col-7 mx-auto">
+                                                        <h4 class="inner-data"><span
+                                                                id="temp_four">-</span>&deg;<sup>C</sup>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-6 mx-auto">
+                                            <div class="card p-2 backGround py-1 my-2">
+                                                <h4 class="card-title-0">Pressure</h4>
+                                                <div class="row d-flex justify-content-between">
+                                                    <div class="col-lg-4 col-4">
+                                                        <img src="icons/pressure.svg" class="icons-0" alt="">
+                                                    </div>
+                                                    <div class="col-lg-7 col-7 mx-auto">
+                                                        <h4 class="inner-data" id="pressure_four">-</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p class="message mt-2" id="message_two">-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
