@@ -3,7 +3,6 @@ let search = document.getElementById("search");
 let currentTemp = document.getElementById("currentTemp");
 let currentCountry = document.getElementById("currentCountry");
 let currentHumidity = document.getElementById("currentHumidity");
-let currentPressure = document.getElementById("currentPressure");
 let currentLat = document.getElementById("currentLat");
 let currentLon = document.getElementById("currentLon");
 let sunrise = document.getElementById("sunrise");
@@ -36,52 +35,28 @@ let fetchData = () => {
       if (resolve.ok) {
         return resolve.json();
       } else {
-        swal("Oops", "Place not found!", "error");
-        console.log(`Error: ${fault}`);
-        initialzeAllToNile();
+        swal("Oops", "Place not found !", "error");
+        setTimeout(() => {
+          location.reload();
+        }, 3000);
       }
     })
     .then((data) => {
-      console.log(data);
       setData(data);
     })
-    .catch((fault) => {
-      swal("Error", "Place not found!", "error");
-      console.log(`Error: ${fault}`);
-      initialzeAllToNile();
+    .catch((error) => {
+      swal("Oops", "Place not found !", "error");
+      setTimeout(() => {
+        location.reload();
+      }, 3000);
+      console.log(`Error ${error}`);
     });
-};
-
-let initialzeAllToNile = () => {
-  currentTemp.innerHTML = "-";
-  currentCountry.innerHTML = "-";
-  currentHumidity.innerHTML = "-";
-  currentPressure.innerHTML = "-";
-  currentLat.innerHTML = "-";
-  currentLon.innerHTML = "-";
-  sunrise.innerHTML = "-";
-  sunset.innerHTML = "-";
-  cloud.innerHTML = "-";
-  uv.innerHTML = "-";
-  windSpeed.innerHTML = "-";
-  windDirection.innerHTML = "-";
-  humidity_two.innerHTML = "-";
-  dew_point_two.innerHTML = "-";
-  temp_two.innerHTML = "-";
-  pressure_two.innerHTML = "-";
-  humidity_four.innerHTML = "-";
-  dew_point_four.innerHTML = "-";
-  temp_four.innerHTML = "-";
-  pressure_four.innerHTML = "-";
-  message_two.innerHTML = "-";
-  message_one.innerHTML = "-";
 };
 
 let setData = (data) => {
   currentCountry.innerHTML = data.location.country;
   currentTemp.innerHTML = data.current.temp_c;
   currentHumidity.innerHTML = data.current.humidity;
-  currentPressure.innerHTML = data.current.pressure_mb;
   currentLat.innerHTML = data.location.lat;
   currentLon.innerHTML = data.location.lon;
   sunrise.innerHTML = data.forecast.forecastday[0].astro.sunrise;

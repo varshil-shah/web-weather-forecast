@@ -41,34 +41,21 @@
 
                             <h3 class=" ml-3 text-danger font-weight-bold mt-3" style="font-size: 22px;">Current data:
                             </h3>
-                            <div class="row mx-1">
-                                <div class="col-lg-6 col-6 mx-auto">
-                                    <div class="card p-1 backGround py-3 my-2" data-toggle="tooltip"
-                                        data-placement="top" title="Temperature">
-                                        <div class="row d-flex justify-content-between">
-                                            <div class="col-lg-4 col-4">
-                                                <img src="icons/temperature.png" class="icons-01" alt="">
-                                            </div>
-                                            <div class="col-lg-7 col-7 mx-auto">
-                                                <h4 class="left-side-box-text"><span id="currentTemp">-</span>&deg;C
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="col-lg-6 col-6 mx-auto">
-                                    <div class="card p-1 backGround py-3 my-2">
-                                        <div class="row d-flex justify-content-between">
-                                            <div class="col-lg-4 col-4">
-                                                <img src="icons/location.png" class="icons-01" alt="">
-                                            </div>
-                                            <div class="col-lg-7 col-7 mx-auto">
-                                                <h4 class="left-side-box-text" id="currentCountry">-</h4>
-                                            </div>
+                            <div class="col-lg-11 col-11 mx-auto">
+                                <div class="card p-1 backGround py-3 my-2">
+                                    <div class="row d-flex justify-content-between">
+                                        <div class="col-lg-4 col-4">
+                                            <img src="icons/location.png" class="icons-01" alt="">
+                                        </div>
+                                        <div class="col-lg-7 col-7 mx-auto">
+                                            <h4 class="left-side-box-text" id="currentCountry">-</h4>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="row mx-1">
 
                                 <div class="col-lg-6 col-6 mx-auto">
                                     <div class="card p-1 backGround py-3 my-2">
@@ -84,13 +71,15 @@
                                 </div>
 
                                 <div class="col-lg-6 col-6 mx-auto">
-                                    <div class="card p-1 backGround py-3 my-2">
+                                    <div class="card p-1 backGround py-3 my-2" data-toggle="tooltip"
+                                        data-placement="top" title="Temperature">
                                         <div class="row d-flex justify-content-between">
                                             <div class="col-lg-4 col-4">
-                                                <img src="icons/pressure.svg" class="icons-01" alt="">
+                                                <img src="icons/temperature.png" class="icons-01" alt="">
                                             </div>
                                             <div class="col-lg-7 col-7 mx-auto">
-                                                <h4 class="left-side-box-text" id="currentPressure">-</h4>
+                                                <h4 class="left-side-box-text"><span id="currentTemp">-</span>&deg;C
+                                                </h4>
                                             </div>
                                         </div>
                                     </div>
@@ -237,7 +226,7 @@
                                     <h3 class="card-title">After 2 hours:</h3>
                                     <div class="row">
                                         <div class="col-lg-6 col-6 mx-auto">
-                                            <div class="card p-2 backGround py-1 my-2">
+                                            <div class="card padding backGround py-1 my-2">
                                                 <h4 class="card-title-0">Humidity</h4>
                                                 <div class="row d-flex justify-content-between">
                                                     <div class="col-lg-4 col-4">
@@ -251,7 +240,7 @@
                                         </div>
 
                                         <div class="col-lg-6 col-6 mx-auto">
-                                            <div class="card p-2 backGround py-1 my-2">
+                                            <div class="card padding backGround py-1 my-2">
                                                 <h4 class="card-title-0">Dew point</h4>
                                                 <div class="row d-flex justify-content-between">
                                                     <div class="col-lg-4 col-4">
@@ -265,7 +254,7 @@
                                         </div>
 
                                         <div class="col-lg-6 col-6 mx-auto">
-                                            <div class="card p-2 backGround py-1 my-2">
+                                            <div class="card padding backGround py-1 my-2">
                                                 <h4 class="card-title-0">Temperature</h4>
                                                 <div class="row d-flex justify-content-between">
                                                     <div class="col-lg-4 col-4">
@@ -281,7 +270,7 @@
                                         </div>
 
                                         <div class="col-lg-6 col-6 mx-auto">
-                                            <div class="card p-2 backGround py-1 my-2">
+                                            <div class="card padding backGround py-1 my-2">
                                                 <h4 class="card-title-0">Pressure</h4>
                                                 <div class="row d-flex justify-content-between">
                                                     <div class="col-lg-4 col-4">
@@ -304,7 +293,7 @@
                                     <h3 class="card-title">After 4 hours:</h3>
                                     <div class="row">
                                         <div class="col-lg-6 col-6 mx-auto">
-                                            <div class="card p-2 backGround py-1 my-2">
+                                            <div class="card padding backGround py-1 my-2">
                                                 <h4 class="card-title-0">Humidity</h4>
                                                 <div class="row d-flex justify-content-between">
                                                     <div class="col-lg-4 col-4">
@@ -318,7 +307,7 @@
                                         </div>
 
                                         <div class="col-lg-6 col-6 mx-auto">
-                                            <div class="card p-2 backGround py-1 my-2">
+                                            <div class="card padding backGround py-1 my-2">
                                                 <h4 class="card-title-0">Dew point</h4>
                                                 <div class="row d-flex justify-content-between">
                                                     <div class="col-lg-4 col-4">
@@ -332,7 +321,7 @@
                                         </div>
 
                                         <div class="col-lg-6 col-6 mx-auto">
-                                            <div class="card p-2 backGround py-1 my-2">
+                                            <div class="card padding backGround py-1 my-2">
                                                 <h4 class="card-title-0">Temperature</h4>
                                                 <div class="row d-flex justify-content-between">
                                                     <div class="col-lg-4 col-4">
@@ -348,7 +337,7 @@
                                         </div>
 
                                         <div class="col-lg-6 col-6 mx-auto">
-                                            <div class="card p-2 backGround py-1 my-2">
+                                            <div class="card padding backGround py-1 my-2">
                                                 <h4 class="card-title-0">Pressure</h4>
                                                 <div class="row d-flex justify-content-between">
                                                     <div class="col-lg-4 col-4">
@@ -371,7 +360,7 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
