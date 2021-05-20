@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: rgb(163, 165, 163);
+  background-color: rgb(12, 12, 12);
   margin: auto 0px;
 }
 
@@ -34,30 +34,44 @@ body {
   border-radius: 5px;
 }
 
+.highlight {
+  font-size: 23px;
+  padding: 10px;
+}
+
 .btn {
   width: 25%;
   margin: 7px 0;
 }
 
 .input {
+  caret-color: #fff;
+  color: #fff;
   padding: 10px 10px;
   margin: 13px 4px;
   outline: none;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  background-color: rgb(12, 12, 12);
   border-radius: 2px;
+  box-shadow: #000 0px 5px 15px 0px;
+}
+
+::placeholder {
+  color: #fff;
 }
 
 .left-side-box-text {
+  color: crimson;
   font-weight: bold;
-  font-size: 19px;
+  font-size: 20px;
   margin-top: 10px;
 }
 
+.mainCard,
 .backGround {
-  background-color: fff;
+  background-color: rgb(12, 12, 12);
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  box-shadow: #000 0px 5px 15px 0px;
   cursor: pointer;
 }
 
@@ -88,11 +102,13 @@ body {
 }
 
 .card-title {
+  color: #fff;
   font-size: 20px;
   font-weight: bold;
 }
 
 .card-title-0 {
+  color: #fff;
   font-size: 15px;
   font-weight: bold;
 }
@@ -101,6 +117,7 @@ body {
   font-size: 18px;
   font-weight: bold;
   padding: 5px 0px;
+  color: #fff;
 }
 
 .inner-data {
@@ -129,8 +146,8 @@ body {
   padding: 7px 5px;
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
-  background-color: crimson;
+  color: crimson;
+  background-color: #fff;
   border-radius: 5px;
 }
 

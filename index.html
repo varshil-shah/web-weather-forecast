@@ -16,7 +16,7 @@
     <title>Weather Forecast</title>
 </head>
 
-<body class="bg-light">
+<body>
 
     <div class="container-fluid">
         <div class="row">
@@ -24,14 +24,14 @@
                 <div class="row gx-3">
                     <!-- left side div -->
                     <div class="col-lg-4 col-md-11 col-11 mx-auto mb-lg-0 mb-5 mt-3">
-                        <div class="card p-2 myshadow pb-4">
+                        <div class="card p-2 myshadow pb-4 mainCard">
                             <div class="row">
                                 <div class="col-lg-3 col-5">
                                     <img src="icons/weather.svg" height="80px" width="80px" alt="">
                                 </div>
                                 <div class="col-lg-9 col-7">
                                     <h3
-                                        class="font-weight-bold banner-heading d-flex justify-content-center align-items-center mt-4">
+                                        class="text-white font-weight-bold banner-heading d-flex justify-content-center align-items-center mt-4">
                                         Weather Forecast</h3>
                                 </div>
                             </div>
@@ -39,16 +39,17 @@
                             <input type="text" placeholder="Enter city name..." id="input" class="input">
                             <button class="btn btn-primary ml-1" id="search">Search</button>
 
-                            <h3 class=" ml-3 text-danger font-weight-bold mt-3" style="font-size: 22px;">Current data:
+                            <h3 class="text-white ml-3 text-danger font-weight-bold mt-3" style="font-size: 22px;">
+                                Current data:
                             </h3>
 
                             <div class="col-lg-11 col-11 mx-auto">
                                 <div class="card p-1 backGround py-3 my-2">
                                     <div class="row d-flex justify-content-between">
-                                        <div class="col-lg-4 col-4">
+                                        <div class="col-lg-3 col-3">
                                             <img src="icons/location.png" class="icons-01" alt="">
                                         </div>
-                                        <div class="col-lg-7 col-7 mx-auto">
+                                        <div class="col-lg-9 col-9 mx-auto">
                                             <h4 class="left-side-box-text" id="currentCountry">-</h4>
                                         </div>
                                     </div>
@@ -117,8 +118,8 @@
 
                     <!-- right side div -->
                     <div class="col-lg-8 col-md-11 col-11 mx-auto mt-lg-0 mt-0">
-                        <div class="card p-2 myshadow">
-                            <h5 class="font-weight-bold p-2">Today's highlight</h5>
+                        <div class="card p-2 myshadow mainCard">
+                            <h5 class="font-weight-bold highlight text-white">Today's highlight</h5>
                             <div class="row">
                                 <div class="col-lg-4 col-11 mx-auto">
 
@@ -261,8 +262,7 @@
                                                         <img src="icons/temperature.png" class="icons-0" alt="">
                                                     </div>
                                                     <div class="col-lg-7 col-7 mx-auto">
-                                                        <h4 class="inner-data"><span
-                                                                id="temp_two">-</span>&deg;<sup>C</sup>
+                                                        <h4 class="inner-data"><span id="temp_two">-</span>&deg;C
                                                         </h4>
                                                     </div>
                                                 </div>
@@ -328,8 +328,7 @@
                                                         <img src="icons/temperature.png" class="icons-0" alt="">
                                                     </div>
                                                     <div class="col-lg-7 col-7 mx-auto">
-                                                        <h4 class="inner-data"><span
-                                                                id="temp_four">-</span>&deg;<sup>C</sup>
+                                                        <h4 class="inner-data"><span id="temp_four">-</span>&deg;C
                                                         </h4>
                                                     </div>
                                                 </div>
