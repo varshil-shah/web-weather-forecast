@@ -37,6 +37,8 @@ body {
 .highlight {
   font-size: 23px;
   padding: 10px;
+  background-color: rgb(12, 12, 12);
+  color: #fff;
 }
 
 .btn {
