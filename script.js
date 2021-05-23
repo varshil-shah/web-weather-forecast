@@ -1,4 +1,5 @@
 let search = document.getElementById("search");
+let loading = document.getElementById("loading");
 
 search.addEventListener("click", async () => {
   try {
@@ -15,11 +16,25 @@ search.addEventListener("click", async () => {
 
 async function fetchData() {
   let place = document.getElementById("input").value;
+  displayLoading();
   url = `https://api.weatherapi.com/v1/forecast.json?key=875cfefd83744d318e471501211805&q=${place}&aqi=no&alerts=yes`;
   const response = await fetch(url);
   const data = response.json();
+  hideLoading();
   return data;
 }
+
+let displayLoading = () => {
+  loading.classList.add("display");
+
+  setTimeout(() => {
+    loading.classList.remove("display");
+  }, 5000);
+};
+
+let hideLoading = () => {
+  loading.classList.remove("display");
+};
 
 let setData = (data) => {
   document.getElementById("currentCountry").textContent = data.location.country;
