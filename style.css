@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: rgb(12, 12, 12);
+  background-color: #fff;
   margin: auto 0px;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 .myshadow {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(77, 77, 77, 0.3) 0px 2px 8px 0px;
 }
 
 .banner-heading {
@@ -37,12 +37,12 @@ body {
 .highlight {
   font-size: 23px;
   padding: 7px;
-  background-color: rgb(15, 15, 15);
-  color: #fff;
+  background-color: rgb(255, 255, 255);
+  color: #000;
 }
 
 hr {
-  color: #fff;
+  color: #000;
 }
 
 .btn {
@@ -51,19 +51,19 @@ hr {
 }
 
 .input {
-  caret-color: #fff;
-  color: #fff;
+  caret-color: #000;
+  color: #000;
   padding: 10px 10px;
   margin: 13px 4px;
   outline: none;
   border: none;
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(255, 255, 255);
   border-radius: 2px;
-  box-shadow: #000 0px 5px 15px 0px;
+  box-shadow: rgba(77, 77, 77, 0.3) 0px 2px 8px 0px;
 }
 
 ::placeholder {
-  color: #fff;
+  color: #000;
 }
 
 .left-side-box-text {
@@ -75,9 +75,9 @@ hr {
 
 .mainCard,
 .backGround {
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
-  box-shadow: #000 0px 5px 15px 0px;
+  box-shadow: rgba(77, 77, 77, 0.3) 0px 2px 8px 0px;
   cursor: pointer;
 }
 
@@ -108,13 +108,13 @@ hr {
 }
 
 .card-title {
-  color: #fff;
+  color: #000;
   font-size: 20px;
   font-weight: bold;
 }
 
 .card-title-0 {
-  color: #fff;
+  color: #000;
   font-size: 15px;
   font-weight: bold;
 }
@@ -123,7 +123,7 @@ hr {
   font-size: 18px;
   font-weight: bold;
   padding: 5px 0px;
-  color: #fff;
+  color: #000;
 }
 
 .inner-data {
@@ -152,9 +152,9 @@ hr {
   padding: 7px 5px;
   font-size: 18px;
   font-weight: bold;
-  color: #fff;
-  background-color: rgb(15, 15, 15);
-  box-shadow: #000 0px 5px 15px 0px;
+  color: #000;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(77, 77, 77, 0.3) 0px 2px 8px 0px;
   border-radius: 5px;
 }
 
